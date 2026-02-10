@@ -1,0 +1,7 @@
+mecanum_drive_node:
+  ros__parameters:
+    wheel_base: 0.25
+    track_width: 0.30
+    wheel_radius: 0.05
+    max_wheel_speed: 15.0
+    motor_directions: [1, -1, 1, -1]  # FL, FR, BL, BR
