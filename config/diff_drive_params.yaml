@@ -1,0 +1,6 @@
+diff_drive_node:
+ ros__parameters:
+  track_width: 0.30
+  wheel_radius: 0.05
+  max_wheel_speed: 15.0
+  motor_directions: [1, -1]  # Left, Right

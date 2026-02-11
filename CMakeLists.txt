@@ -16,15 +16,19 @@ find_package(geometry_msgs REQUIRED)
 include_directories(include)
 
 
-add_executable(mecanum_drive src/nodes/mecanum_drive_node.cpp)
-ament_target_dependencies(mecanum_drive rclcpp std_msgs geometry_msgs)
+add_executable(mecanum_drive_node src/nodes/mecanum_drive_node.cpp)
+ament_target_dependencies(mecanum_drive_node rclcpp std_msgs geometry_msgs)
+
+add_executable(diff_drive_node src/nodes/differential_drive_node.cpp)
+ament_target_dependencies(diff_drive_node rclcpp std_msgs geometry_msgs)
 
 install (TARGETS
-  mecanum_drive
+  mecanum_drive_node
+  diff_drive_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY config
+install(DIRECTORY config launch
   DESTINATION share/${PROJECT_NAME}
 )
 
